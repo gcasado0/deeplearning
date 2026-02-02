@@ -1,6 +1,12 @@
 import json
-import openai
 from collections import defaultdict
+import sys
+from pathlib import Path
+# Agregar la raíz del proyecto al path
+project_root = Path.cwd().parent
+sys.path.insert(0, str(project_root))
+
+from lib_openai import get_completion_from_messages
 
 products_file = 'products.json'
 categories_file = 'categories.json'
@@ -109,14 +115,14 @@ step_6_system_message_content = f"""
 step_6_system_message = {'role':'system', 'content': step_6_system_message_content}    
 
 
-def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0, max_tokens=500):
+""" def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0, max_tokens=500):
     response = openai.ChatCompletion.create(
         model=model,
         messages=messages,
         temperature=temperature, 
         max_tokens=max_tokens, 
     )
-    return response.choices[0].message["content"]
+    return response.choices[0].message["content"] """
 
 def create_categories():
     categories_dict = {

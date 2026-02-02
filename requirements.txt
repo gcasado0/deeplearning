@@ -4,3 +4,5 @@ matplotlib
 openai
 openpyxl
 seaborn
+panel
+jupyter_bokeh
