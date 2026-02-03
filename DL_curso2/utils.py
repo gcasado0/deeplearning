@@ -84,7 +84,7 @@ FotoSnap Instant Camera
 Only output the list of objects, with nothing else.
 """
 
-step_2_system_message = {'role':'system', 'content': step_2_system_message_content}    
+step_2_system_message = {'role':'system', 'content': step_2_system_message_content}
 
 
 step_4_system_message_content = f"""
@@ -93,7 +93,7 @@ step_4_system_message_content = f"""
     Make sure to ask the user relevant follow-up questions.
 """
 
-step_4_system_message = {'role':'system', 'content': step_4_system_message_content}    
+step_4_system_message = {'role':'system', 'content': step_4_system_message_content}
 
 step_6_system_message_content = f"""
     You are an assistant that evaluates whether \
